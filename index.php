@@ -8,11 +8,10 @@ require(SITE_PATH . 'vendor' . DS . 'autoload.php');
 require(SITE_PATH . 'core' . DS . 'Connecting_DB.php');
 
 try{
-// Создаем объект главного контроллера
-$frontObj = core\FrontController::getInstance();
 // Запускаем маршрутизатор
+$frontObj = core\FrontController::getInstance();
 	$frontObj->route();
-// Кидаем 404 ошибку
+// Отображаем страничку 404
 }catch (core\NotFoundPageException $e){
 	// echo $e->getMessage(); // Для отладки
 	$rc = new \ReflectionClass('\Main\controllers\NotFoundPageController');
