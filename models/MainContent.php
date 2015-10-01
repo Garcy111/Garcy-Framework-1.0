@@ -1,4 +1,5 @@
 <?php
+namespace Main\models;
 // На всех страницах сайта
 	class MainContent {
 

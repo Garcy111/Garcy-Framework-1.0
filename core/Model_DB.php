@@ -1,4 +1,5 @@
 <?php
+namespace Main\core;
 	Abstract Class Model_DB {
 
 	protected $db;

@@ -1,21 +1,21 @@
 <?php
-// отображение ошибок
-error_reporting (E_ALL);
+namespace Main;
+
 session_start();
-// подключаем конфиг
-require_once('config.php');
-// Соединяемся с БД
-require_once(SITE_PATH.DS.'core'.DS.'Connecting_DB.php');
-// подключаем ядро сайта
-require_once(SITE_PATH.DS.'core'.DS.'Core.php');
+
+require('config.php');
+require(SITE_PATH . 'vendor' . DS . 'autoload.php');
+require(SITE_PATH . 'core' . DS . 'Connecting_DB.php');
+
 try{
 // Создаем объект главного контроллера
-$frontObj = FrontController::getInstance();
+$frontObj = core\FrontController::getInstance();
 // Запускаем маршрутизатор
 	$frontObj->route();
 // Кидаем 404 ошибку
-}catch (NotFoundPageException $e){
-	$rc = new ReflectionClass('NotFoundPageController');
+}catch (core\NotFoundPageException $e){
+	// echo $e->getMessage(); // Для отладки
+	$rc = new \ReflectionClass('\Main\controllers\NotFoundPageController');
 	$controller = $rc->newInstance();
 	$method = $rc->getMethod('indexAction');
 	$method->invoke($controller);

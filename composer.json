@@ -1,0 +1,17 @@
+{
+    "name": "garcy/garcy",
+    "require": {
+        "smarty/smarty": "3.1.27"
+    },
+    "authors": [
+        {
+            "name": "Nikita Rastich",
+            "email": "garcy999@ya.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Main\\": "/home/garcy/public_html/mysite/"
+        }
+    }
+}

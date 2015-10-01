@@ -1,3 +1,3 @@
 <?php
-	class NotFoundPageException extends Exception {}
-?>
+namespace Main\core;
+	class NotFoundPageException extends \Exception {}

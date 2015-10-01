@@ -1,8 +1,8 @@
 <?php
-	class NotFoundPageController implements IController {
+namespace Main\controllers;
+	class NotFoundPageController implements \Main\core\IController {
 		public function indexAction() {
-			$notFoundPage = new NotFoundPage();
+			$notFoundPage = new \Main\models\NotFoundPage();
 			$notFoundPage->render();
 		}
 	}
-?>

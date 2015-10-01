@@ -1,4 +1,5 @@
 <?php
+namespace Main\models;
 	class NotFoundPage extends MainContent {
 
 		public function __construct() {
@@ -7,8 +8,7 @@
 		}
 
 		public function render() {
-			$smarty = new Template();
+			$smarty = new \Main\core\Template();
 			$smarty->display('NotFoundPage.tpl');
 		}
 	}
-?>

@@ -1,5 +1,6 @@
 <?php
-class Model_Users extends Model_DB {
+namespace Main\models;
+class Model_Users extends \Main\core\Model_DB {
 
 	public $id;
 	public $login;
@@ -13,4 +14,3 @@ class Model_Users extends Model_DB {
 			);
 	}
 }
-?>

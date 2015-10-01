@@ -1,6 +1,8 @@
 <?php
-	require_once(SMARTY_DIR.'Smarty.class.php');
-	class Template extends Smarty {
+namespace Main\core;
+	// require_once(SMARTY_DIR.'Smarty.class.php');
+// require_once(SITE_PATH . 'vendor/smarty/smarty/libs/Smarty.class.php');
+	class Template extends \Smarty {
 
 		public function __construct() {
 			parent::__construct();
@@ -10,4 +12,3 @@
 			$this->cache_dir = SMARTY_CACHE;
 		}
 	}
-?>
